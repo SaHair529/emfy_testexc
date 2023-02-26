@@ -14,11 +14,21 @@
     }
   },
   "locations": ["lcard-1"],
-  "settings": {
-    "phone": {
-      "name": "settings.phone",
-      "type": "text",
-      "required": false
-    }
+    "settings": {
+      "login": {
+        "name": "settings.login",
+        "type": "text",
+        "required": false
+      },
+      "api_key": {
+        "name": "settings.api_key",
+        "type": "text",
+        "required": false
+      },
+      "account": {
+        "name": "settings.account",
+        "type": "text",
+        "required": false
+      }
   }
 }

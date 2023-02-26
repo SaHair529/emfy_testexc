@@ -1,17 +1,18 @@
-define(['jquery'], function($) {
+define(['jquery', './renderer.js', './requests_sender.js'], function($, Renderer, ReqSender) {
     return new function ()
     {
         self = this
 
-        self.initHandle = function ()
+        self.initHandle = function (widget)
         {
-            self.btnClicks.leadProducts()
+            self.btnClicks.leadProducts(widget)
         }
 
         self.btnClicks = {
-            leadProducts: function() {
+            leadProducts: function(widget) {
                 $(document).on('click', '.emfy_lead_products_btn', () => {
-                    alert('click')
+                    ReqSender.requestLeadProducts()
+                    Renderer.renderProductsInModal(widget)
                 })
             }
         }

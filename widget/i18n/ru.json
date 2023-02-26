@@ -6,6 +6,8 @@
         "tour_description":"Описание виджета"
     },
     "settings":{
-        "phone":"Phone number"
+        "login":"User login",
+        "api_key":"API key",
+        "account":"Account"
     }
 }

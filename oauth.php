@@ -6,9 +6,8 @@ session_start();
 $apiClient = new AmoCRMApiClient(CLIENT_ID, CLIENT_SECRET, REDIRECT_URI);
 
 $apiClient->setAccountBaseDomain(SUBDOMAIN);
-$code = '';
 try {
-    $accessToken = $apiClient->getOAuthClient()->getAccessTokenByCode($code);
+    $accessToken = $apiClient->getOAuthClient()->getAccessTokenByCode($_GET['code']);
 
     if (!$accessToken->hasExpired()) {
         saveToken([

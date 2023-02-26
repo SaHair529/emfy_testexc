@@ -4,7 +4,8 @@ define(['twigjs'], function(Twig) {
         /**
          * Генерация шаблона кнопки отображения товаров
          */
-        this.getLeadProductsButton = function() {
+        this.getLeadProductsButton = function()
+        {
             return Twig({ref: '/tmpl/controls/button.twig'}).render({
                 text: 'Товары сделки',
                 class_name: 'emfy_lead_products_btn',
