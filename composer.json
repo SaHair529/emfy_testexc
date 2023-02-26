@@ -1,5 +1,9 @@
 {
     "require": {
-        "amocrm/amocrm-api-library": "^0.13.0"
+        "amocrm/amocrm-api-library": "^0.13.0",
+      "ext-json": "*"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^6.2"
     }
 }
