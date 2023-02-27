@@ -3,8 +3,8 @@ define(['jquery'], function ($) {
     {
         this.requestLeadProducts = function()
         {
-            //const url = 'http://localhost/get_lead_products.php'
-            const url = 'https://webhook.site/84f5ff9b-3b2c-4815-a63f-600749438833'
+            const url = 'https://shdbd-site.ru/emfy_test/get_lead_products.php'
+            // const url = 'https://webhook.site/84f5ff9b-3b2c-4815-a63f-600749438833'
             return this.sendRequest(url, {
                 lead_id: AMOCRM.data.current_card.id
             })
