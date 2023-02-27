@@ -12,7 +12,7 @@ define(['jquery', './renderer.js', './requests_sender.js'], function($, Renderer
             leadProducts: function(widget) {
                 $(document).on('click', '.emfy_lead_products_btn', () => {
                     ReqSender.requestLeadProducts()
-                        .done(data => Renderer.renderProductsInModal(widget, data))
+                        .done(data => Renderer.renderProductsInModal(widget, JSON.parse(data)))
                 })
             }
         }
