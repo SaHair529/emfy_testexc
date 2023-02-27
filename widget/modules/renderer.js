@@ -22,7 +22,7 @@ define([
                 }, {})
             }
 
-            this.renderProductsInModal = function(widget)
+            this.renderProductsInModal = function(widget, productsData)
             {
                 widget.render({
                     href: '/templates/products.twig',
@@ -31,20 +31,17 @@ define([
                     promised: true
                 })
                     .then(template => {
-                        template = template.render({})
+                        template = template.render(productsData)
 
                         modal = new Modal({
                             class_name: 'emfytest_modal',
                             init: function ($modal_body) {
-                                const $this = $(this)
                                 $modal_body
                                     .trigger('modal:loaded')
                                     .html(template)
                                     .trigger('modal:centrify')
                             },
-                            destroy: function() {
-
-                            }
+                            destroy: function() {}
                         })
                     })
             }

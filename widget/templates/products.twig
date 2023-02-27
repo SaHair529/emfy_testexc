@@ -1,3 +1,9 @@
 <div>
-    Products
+    <h3>Товары сделки:</h3>
+    <ul>
+        {% for name in product_names %}
+            <li>{{ name }}</li>
+        {% endfor %}
+    </ul>
+    <b>Общее количество товаров: {{ product_amount }}</b>
 </div>
